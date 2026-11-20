@@ -1,64 +1,50 @@
-# SigmaOS-alertmanager Component Wiki
+# SigmaOS-SigmaOS-alertmanager Component Wiki
 
 ## Overview
-SigmaOS-alertmanager provides alert management and notification clustering support for the SigmaOS operating system. It demonstrates the alert clustering subsystem and alert manager integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic alert manager initialization.
+SigmaOS-SigmaOS-alertmanager provides GitHub description is a placeholder; component scope remains unclassified. for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
 
 ## Principles
 - Single Responsibility
-- Alert Management Abstraction
-- Fail-Fast on Alert Manager Initialization Errors
-- Deterministic Alert Manager Setup
-- Clear Abstraction Over Alert Manager APIs
-- Composition over Inheritance for alert manager extensions
+- SigmaOS-alertmanager Abstraction
+- Fail-Fast on SigmaOS-alertmanager Initialization Errors
+- Deterministic SigmaOS-alertmanager Setup
+- Clear Abstraction Over SigmaOS-alertmanager APIs
+- Composition over Inheritance for SigmaOS-alertmanager extensions
 
 ## Architecture
-SigmaOS-alertmanager follows an alert manager pattern:
-- **Alert Manager Core**: Provides alert clustering, notification grouping, and alert deduplication
-- **Notification Clustering**: Supports alert clustering, notification grouping, and alert deduplication
-- **Alert Routing**: Supports alert routing, alert escalation, and alert silence management
-- **Error Handling**: Fail-fast on invalid alert manager configurations or unsupported alert types
+SigmaOS-SigmaOS-alertmanager follows a SigmaOS-alertmanager pattern:
+- **SigmaOS-alertmanager Core**: Provides SigmaOS-alertmanager support, SigmaOS-alertmanager management, and SigmaOS-alertmanager tracking
+- **Management**: Supports SigmaOS-alertmanager management, SigmaOS-alertmanager configuration, and SigmaOS-alertmanager lifecycle
+- **Tracking**: Supports SigmaOS-alertmanager status, SigmaOS-alertmanager tracking, and SigmaOS-alertmanager lifecycle
+- **Error Handling**: Fail-fast on invalid SigmaOS-alertmanager configurations or unsupported SigmaOS-alertmanager types
 
 ## API
 The component provides the following public APIs:
-- `manager::alert::add(alert)` - Add an alert to the alert manager
-- `manager::alert::route(alert)` - Route an alert to appropriate handlers
-- `manager::cluster::status()` - Get alert manager cluster status and member information
-- `manager::silence::manage(alert_id, duration)` - Manage alert silencing duration
-- Error types for alert manager failure scenarios or unsupported alert types
+-  - Manage a SigmaOS-alertmanager by given configuration
+-  - Register a SigmaOS-alertmanager by given name
+-  - Get SigmaOS-alertmanager status and SigmaOS-alertmanager availability
+-  - Track SigmaOS-alertmanager management and SigmaOS-alertmanager tracking
+- Error types for SigmaOS-alertmanager failure scenarios or unsupported SigmaOS-alertmanager types
 
 ## Test Structure (Arrange-Act-ASSERT)
 All tests follow the AAA pattern:
-1. **Arrange**: Set up test environment with specific alert manager configuration
-2. **Act**: Execute the code under test (alert addition, alert routing)
-3. **Assert**: Verify the expected alert manager results
+1. **Arrange**: Set up test environment with specific SigmaOS-alertmanager configuration
+2. **Act**: Execute the code under test (SigmaOS-alertmanager init, SigmaOS-alertmanager management)
+3. **Assert**: Verify the expected SigmaOS-alertmanager results
 
 Example:
-```rust
-#[test]
-fn test_manager_alert_aaa() {
-    // Arrange
-    let alert = Alert::new("critical", "system overload detected");
-    
-    // Act
-    let result = manager::alert::add(alert);
-    
-    // Assert
-    assert!(result.is_ok());
-    let managed = result.unwrap();
-    assert!(managed.is_routed());
-}
-```
+
 
 ## Development
-- Follows Rust best practices with `#![forbid(unsafe_code)]`
-- Alert manager initialization is best-effort; gracefully degrades on unsupported configurations
-- Comprehensive error types for all alert manager failure scenarios
-- Unit tests provided for alert management and alert routing
-- Integration tests for full alert manager system with actual alert clustering
+- Follows Rust best practices with 
+- SigmaOS-alertmanager initialization is best-effort; gracefully degrades on unsupported configurations
+- Comprehensive error types for all SigmaOS-alertmanager failure scenarios
+- Unit tests provided for SigmaOS-alertmanager management and configuration
+- Integration tests for full SigmaOS-alertmanager system with actual SigmaOS-alertmanager integration
 
 ## TODO
-- Add support for additional alert types (warning, error, info, debug)
-- Expand clustering capabilities (alert grouping, alert deduplication, alert correlation)
-- Add routing features (alert escalation, alert silence, alert routing rules)
-- Create integration tests with actual alert manager clustering systems
-- Implement alert manager persistence and alert state management
+- Add support for additional SigmaOS-alertmanager types
+- Expand SigmaOS-alertmanager capabilities (SigmaOS-alertmanager features, SigmaOS-alertmanager configurations, SigmaOS-alertmanager tracking)
+- Add lifecycle features (SigmaOS-alertmanager tracking, SigmaOS-alertmanager lifecycle, SigmaOS-alertmanager propagation)
+- Create integration tests with actual SigmaOS-alertmanager systems and SigmaOS-alertmanager integration
+- Implement SigmaOS-alertmanager persistence and SigmaOS-alertmanager state management
